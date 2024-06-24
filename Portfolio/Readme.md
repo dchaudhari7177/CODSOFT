@@ -5,7 +5,10 @@
 This is a personal portfolio website for showcasing Dipak Chaudhari's skills, projects, and certificates. The website provides a comprehensive overview of Dipak's professional background, skills, and achievements.
 
 ## Demo
-Watch a demo of the portfolio website [here](https://youtu.be/w_j3muVSUi8).
+Click the image below to watch the demo video:
+
+[![Watch the video](https://img.youtube.com/vi/w_j3muVSUi8/0.jpg)](https://youtu.be/w_j3muVSUi8)
+
 
 ## Features
 - **Responsive Design**: Ensures optimal viewing experience across various devices.
