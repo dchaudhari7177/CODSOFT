@@ -9,7 +9,6 @@ This is a responsive landing page template built using HTML, CSS, and Bootstrap 
 - [Demo](#demo)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Author](#author)
 
