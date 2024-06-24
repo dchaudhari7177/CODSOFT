@@ -424,7 +424,7 @@ body {
   .certificates .card .card-back .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: crimson;
+    background-color: #3498db;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -432,6 +432,6 @@ body {
   }
   
   .certificates .card .card-back .btn:hover {
-    background-color: #ca2c2c;
+    background-color: #166a40;
   }
   
