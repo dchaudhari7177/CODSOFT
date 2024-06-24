@@ -131,4 +131,24 @@ body {
       transform: translateY(-10px);
     }
   }
-  
+  .social-icons {
+    margin-bottom: 20px;
+  }
+  .social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #f7f7f7;
+    color: #000000;
+    text-align: center;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .social-icon:hover {
+    background-color: #ffffff;
+    color: #3498db;
+    border: 2px solid #3498db;
+  }
