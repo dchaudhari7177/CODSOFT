@@ -53,4 +53,82 @@ body {
   nav ul li a:hover {
     color: #ff6347;
   }
+  .about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 550px;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  .about-content {
+    display: flex;
+    width: 100%;
+  }
+  .about-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 20px;
+    text-align: center;
+  }
+  .about-info h2 {
+    font-size: 40px;
+    color: #333333;
+    margin-bottom: 13px;
+    font-family: 'Courier New', monospace;
+  }
+  .about-info p {
+    font-size: 25px;
+    color: #666666;
+    margin-bottom: 10px;
+    font-family: Garamond, serif;
+  }
+  .about-info .button {
+    display: inline-block;
+    padding: 15px 25px;
+    margin: 10px;
+    border: 2px solid #3498db;
+    border-radius: 50px;
+    background-color: #3498db;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .about-info .button:hover {
+    background-color: #ffffff;
+    color: #3498db;
+  }
+  .about-info a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  .about-info a:hover {
+    color: #ff6347;
+  }
+  .about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-image img {
+    max-width: 60%; 
+    height: auto;
+    border-radius: 50%;
+    animation: float 3s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
   
