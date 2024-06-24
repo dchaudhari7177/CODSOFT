@@ -152,3 +152,84 @@ body {
     color: #3498db;
     border: 2px solid #3498db;
   }
+  .skills {
+    height: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+  }
+  .skills h2 {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  .skills h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #3498db;
+    margin: 10px auto 0;
+  }
+  .skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 40px;
+  }
+  .skills-category {
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .skills-category h3 {
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  .skill {
+    margin-bottom: 10px;
+  }
+  .skill h4 {
+    font-size:15px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  .skill-bar {
+    position: relative;
+    width: 100%;
+    height: 20px; 
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .skill-level {
+    height: 100%;
+    color: #fff;
+    background-color: #3498db;
+    border-radius: 10px;
+    position: relative;
+    animation: grow 2s ease-in-out;
+  }
+  .skill-level::after {
+    content: attr(data-level); 
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 20px;
+    font-size: 14px;
+    color: #fff;
+    display: block;
+  }
+  @keyframes grow {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
