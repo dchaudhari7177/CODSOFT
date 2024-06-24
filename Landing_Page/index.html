@@ -40,8 +40,11 @@
     <nav class="navbar navbar-expand-lg navbar-light header-section">
         <div class="content-wrapper">
             <a class="navbar-brand" href="#">
-                <img src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg" width="30" height="30"
-                    class="d-inline-block align-top" alt="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-square-fill sdfg d-inline-block align-top" viewBox="0 0 16 16">
+                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0"/>
+                  </svg>
+               
+               
                 Landing Page
             </a>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -50,19 +53,19 @@
                         <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
+                        <a class="nav-link" href="#div-sec">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Page</a>
+                        <a class="nav-link" href="#about-us">Page</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Testimonials</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Buy Now</a>
@@ -134,7 +137,7 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-    <div class="div-sec">
+    <div class="div-sec" id="div-sec">
         <div class="section">
             <h5><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-rocket rocket-icon" viewBox="0 0 16 16">
@@ -175,7 +178,7 @@
             </div>
         </div>
     </div>
-    <div class="about-us">
+    <div class="about-us" id="about-us">
         <div class="text">
             <h2>About Us</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor at enim tincidunt tincidunt. Nam
@@ -192,14 +195,72 @@
             <img src="https://i.pinimg.com/736x/2d/b3/c0/2db3c0c737d565ab24951103e248bba9.jpg" alt="About Us Image">
         </div>
     </div>
-    <div class="services-section">
+    <div class="services-section" id="services">
         <h2 class="services-header">Our Services</h2>
         <div class="services-images">
-            <img src="https://via.placeholder.com/200x150" alt="Service 1">
-            <img src="https://via.placeholder.com/200x150" alt="Service 2">
-            <img src="https://via.placeholder.com/200x150" alt="Service 3">
+            <div class="image-container">
+                <div class="image-box">
+                    <img src="https://img.freepik.com/premium-photo/there-are-many-computers-desk-this-office-generative-ai_974521-8717.jpg" alt="Service 1">
+                    <div class="semi-circular-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-rocket logo" viewBox="0 0 16 16">
+                            <path d="M8 8c.828 0 1.5-.895 1.5-2S8.828 4 8 4s-1.5.895-1.5 2S7.172 8 8 8"/>
+                            <path d="M11.953 8.81c-.195-3.388-.968-5.507-1.777-6.819C9.707 1.233 9.23.751 8.857.454a3.5 3.5 0 0 0-.463-.315A2 2 0 0 0 8.25.064.55.55 0 0 0 8 0a.55.55 0 0 0-.266.073 2 2 0 0 0-.142.08 4 4 0 0 0-.459.33c-.37.308-.844.803-1.31 1.57-.805 1.322-1.577 3.433-1.774 6.756l-1.497 1.826-.004.005A2.5 2.5 0 0 0 2 12.202V15.5a.5.5 0 0 0 .9.3l1.125-1.5c.166-.222.42-.4.752-.57.214-.108.414-.192.625-.281l.198-.084c.7.428 1.55.635 2.4.635s1.7-.207 2.4-.635q.1.044.196.083c.213.09.413.174.627.282.332.17.586.348.752.57l1.125 1.5a.5.5 0 0 0 .9-.3v-3.298a2.5 2.5 0 0 0-.548-1.562zM12 10.445v.055c0 .866-.284 1.585-.75 2.14.146.064.292.13.425.199.39.197.8.46 1.1.86L13 14v-1.798a1.5 1.5 0 0 0-.327-.935zM4.75 12.64C4.284 12.085 4 11.366 4 10.5v-.054l-.673.82a1.5 1.5 0 0 0-.327.936V14l.225-.3c.3-.4.71-.664 1.1-.861.133-.068.279-.135.425-.199M8.009 1.073q.096.06.226.163c.284.226.683.621 1.09 1.28C10.137 3.836 11 6.237 11 10.5c0 .858-.374 1.48-.943 1.893C9.517 12.786 8.781 13 8 13s-1.517-.214-2.057-.607C5.373 11.979 5 11.358 5 10.5c0-4.182.86-6.586 1.677-7.928.409-.67.81-1.082 1.096-1.32q.136-.113.236-.18Z"/>
+                            <path d="M9.479 14.361c-.48.093-.98.139-1.479.139s-.999-.046-1.479-.139L7.6 15.8a.5.5 0 0 0 .8 0z"/>
+                          </svg>
+                       
+                        <span class="label-text">Servicead</span>
+                    </div>
+                </div>
+            </div>
+            <div class="image-container">
+                <div class="image-box">
+                    <img src="https://img.freepik.com/free-photo/view-modern-laptops-office_23-2148804560.jpg" alt="Service 2">
+                    <div class="semi-circular-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-headphones logo" viewBox="0 0 16 16">
+                    <path
+                        d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5" />
+                </svg>
+                        <span class="label-text">Service 2</span>
+                    </div>
+                </div>
+            </div>
+            <div class="image-container">
+                <div class="image-box">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?fm=jpg&w=3000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGxhcHRvcCUyMG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D" alt="Service 3">
+                    <div class="semi-circular-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-clock logo" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+                </svg>
+                        <span class="label-text">Service 3</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="unique1" id="contact">
+        <h2 class="unique2">Contact Us</h2>
+        <form class="unique3">
+            <div class="unique4">
+                <label for="contactName">Name</label>
+                <input type="text" class="unique5" id="contactName" placeholder="Your Name">
+            </div>
+            <div class="unique4">
+                <label for="contactEmail">Email</label>
+                <input type="email" class="unique5" id="contactEmail" placeholder="name@example.com">
+            </div>
+            <div class="unique4">
+                <label for="contactMessage">Message</label>
+                <textarea class="unique5" id="contactMessage" rows="4" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="unique6">Submit</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 CodSoft.in. All rights reserved. Made by <a href="https://linktr.ee/dipakchaudhari171">Dipak Rajendra Chaudhari</a></p>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

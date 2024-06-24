@@ -1,5 +1,5 @@
 .top-section {
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background: linear-gradient(to right, #5e5be3, #feb47b);
     height: 50px;
     display: flex;
     align-items: center;
@@ -92,12 +92,15 @@
     transition: background 0.3s, color 0.3s;
 }
 .btn-new:hover{
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background: linear-gradient(to right, #5e5be3, #feb47b);
     color: #d0bdbd;
 }
 .btn-rounded:hover {
     background: yellow;
     color: #000;
+}
+.sdfg{
+        height: 30px;
 }
 .navbar-nav .nav-link {
     color: #000;
@@ -154,7 +157,7 @@
 
 .vl {
     width: 6px; 
-    background: linear-gradient(to bottom, #ff7e5f, #feb47b); 
+    background: linear-gradient(45deg, #feb47b, #ff7e5f);
     height: 300px; 
     margin-left: 200px; 
 }
@@ -163,7 +166,7 @@
     justify-content: space-around;
     align-items: center;
     height: 300px;
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background: linear-gradient(to right, #5e5be3, #feb47b);
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -266,7 +269,7 @@
     display: block;
     width: 90px;
     height: 3px;
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background: linear-gradient(to right, #5e5be3, #feb47b);
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -300,7 +303,7 @@
 }
 
 .btn-neww:hover{
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background: linear-gradient(to right, #5e5be3, #feb47b);
     color: #d0bdbd;
 }
 .carousel {
@@ -326,15 +329,13 @@
     filter: blur(2px);
     
 }
-
-
 .services-header {
     position: relative;
     font-size: 30px;
     margin-bottom: 20px;
-    text-align: left; 
-    width: calc(100% - 200px); 
-    margin-left: 190px; 
+    text-align: left;
+    width: calc(100% - 200px);
+    margin-left: 190px;
 }
 
 .services-header::after {
@@ -346,7 +347,6 @@
     height: 3px;
     background-color: #ff7e5f;
 }
-
 
 .services-container {
     display: flex;
@@ -364,12 +364,207 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
+}
+
+.image-container {
+    position: relative;
+    margin: 30px;
+}
+
+.image-box {
+    position: relative;
+    width: 300px;
+    height: 200px;
 }
 
 .services-images img {
-    width: 300px;
-    height: 200px;
-    margin: 30px; 
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+}
+
+.semi-circular-box {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    bottom: 0;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #8e4dd9, #feb47b);
+    border: 1px solid #ccc;
+    border-top-left-radius: 75px;
+    border-bottom-left-radius: 75px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-left: 5px;
+}
+
+.logo {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.label-text {
+    font-size: 20px;
+    color: #000;
+}
+.unique1 {
+    background: #ffffff;
+    padding: 40px;
+    padding-left: 180px;
+    padding-right: 180px;
+    border-radius: 15px;
+    width: 100%;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.unique2 {
+    position: relative;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: left;
+    width: calc(100% - 200px);
+    
+}
+.unique2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: #ff7e5f;
+}
+.unique3 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.unique4 {
+    display: flex;
+    flex-direction: column;
+}
+
+.unique4 label {
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 16px;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.unique5 {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    animation: slideInRight 1s ease-in-out;
+}
+
+.unique5:focus {
+    border-color: #ff7e5f;
+    box-shadow: 0 0 10px rgba(255, 126, 95, 0.3);
+    outline: none;
+}
+
+.unique6 {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(to right, #5e5be3, #feb47b);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    animation: bounceIn 1s ease-in-out;
+}
+
+.unique6:hover {
+    background: linear-gradient(to right, #5e5be3, #feb47b);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceIn {
+    from, 20%, 40%, 60%, 80%, to {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-10px);
+    }
+    40% {
+        transform: translateY(-6px);
+    }
+    60% {
+        transform: translateY(-3px);
+    }
+    80% {
+        transform: translateY(-1px);
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    
+    height: 35px;
+    width: 100%;
+}
+footer a {
+    color: #f1c40f; 
+    text-decoration: none; 
+}
+
+footer a:hover {
+    text-decoration: underline; 
 }
