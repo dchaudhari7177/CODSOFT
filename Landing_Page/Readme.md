@@ -22,7 +22,7 @@ This project is a simple yet stylish landing page template designed for showcasi
 
 Click the image below to watch the demo video:
 
-[![Watch the video](https://img.youtube.com/vi/SNmBeUmVxwI/0.jpg)](https://www.youtube.com/watch?v=SNmBeUmVxwI)
+[![Watch the video]([https://img.youtube.com/vi/SNmBeUmVxwI/0.jpg](https://youtu.be/6MwSYb_ZHy0?feature=shared))]([https://www.youtube.com/watch?v=SNmBeUmVxwI](https://youtu.be/6MwSYb_ZHy0?feature=shared))
 
 ## Features
 
