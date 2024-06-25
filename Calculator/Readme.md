@@ -1,5 +1,5 @@
 
-# Dipak's Calculator
+# Calculator
 
 ## Description
 This is a colorful and interactive calculator. The calculator performs all basic mathematical operations and features an intuitive and animated user interface. It is optimized for a responsive design, ensuring a seamless user experience across various devices.
