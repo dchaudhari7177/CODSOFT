@@ -17,12 +17,12 @@ This is a responsive landing page template built using HTML, CSS, and Bootstrap 
 
 This project is a simple yet stylish landing page template designed for showcasing a creative digital agency. It includes sections for social media links, contact information, a navigation bar, carousel slider for featured content, service offerings, about us section, and a contact form.
 
-
 ## Demo
 
 Click the image below to watch the demo video:
+[![Watch the new video](https://img.youtube.com/vi/6MwSYb_ZHy0/0.jpg)](https://youtu.be/6MwSYb_ZHy0)
 
-[![Watch the video](https://img.youtube.com/vi/SNmBeUmVxwI/0.jpg)](https://www.youtube.com/watch?v=SNmBeUmVxwI)
+
 
 ## Features
 
