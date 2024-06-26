@@ -1,0 +1,58 @@
+.jobseeker-dashboard {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .animated-title {
+    font-size: 2.5rem;
+    color: #333;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .dashboard-description {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .applications-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .application-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease;
+  }
+  
+  .application-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .application-card h2 {
+    font-size: 1.5rem;
+    color: #007BFF;
+  }
+  
+  .application-card p {
+    color: #333;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  @media (max-width: 768px) {
+    .applications-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
