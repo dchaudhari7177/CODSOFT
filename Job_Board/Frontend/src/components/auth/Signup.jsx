@@ -3,6 +3,7 @@ import axios from 'axios';
 import './Signup.css';
 
 const Signup = () => {
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -15,7 +16,7 @@ const Signup = () => {
       return;
     }
     try {
-      const response = await axios.post('/api/auth/signup', { email, password });
+      const response = await axios.post('http://localhost:5000/api/auth/signup', { username, email, password, role: 'jobseeker' });
       console.log(response.data);
     } catch (err) {
       setError('Signup failed');
@@ -28,6 +29,14 @@ const Signup = () => {
         <h1 className="animated-title">Signup</h1>
         {error && <p className="error-message">{error}</p>}
         <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+            className="input-field"
+          />
           <input
             type="email"
             placeholder="Email"
