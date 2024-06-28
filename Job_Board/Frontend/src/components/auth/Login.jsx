@@ -1,21 +1,30 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useAuth } from '../../context/AuthContext';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Login.css';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const { login } = useAuth();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/auth/login', { email, password });
-      console.log(response.data);
+      const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      login();
+      toast.success('Login successful!', { position: 'top-center' });
+      navigate('/');
     } catch (err) {
       setError('Invalid email or password');
     }
   };
+  
 
   return (
     <div className="login-container">

@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useAuth } from '../../context/AuthContext';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Signup.css';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
   const [username, setUsername] = useState('');
@@ -8,6 +12,8 @@ const Signup = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
+  const { login } = useAuth();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,7 +23,11 @@ const Signup = () => {
     }
     try {
       const response = await axios.post('http://localhost:5000/api/auth/signup', { username, email, password, role: 'jobseeker' });
-      console.log(response.data);
+      login();
+      toast.success('Signup successful!', {
+        position: toast.POSITION.TOP_CENTER,
+      });
+      navigate('/login');
     } catch (err) {
       setError('Signup failed');
     }

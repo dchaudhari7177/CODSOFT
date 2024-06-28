@@ -10,24 +10,27 @@ import JobDetail from './components/job/JobDetail';
 import JobForm from './components/job/JobForm';
 import EmployerDashboard from './pages/EmployerDashboard';
 import JobSeekerDashboard from './pages/JobSeekerDashboard';
+import { AuthProvider } from './context/AuthContext';
 
 const App = () => {
   return (
     <Router>
-      <div>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/jobs" element={<JobList />} />
-          <Route path="/jobs/:jobId" element={<JobDetail />} />
-          <Route path="/employer-dashboard" element={<EmployerDashboard />} />
-          <Route path="/jobseeker-dashboard" element={<JobSeekerDashboard />} />
-          <Route path="/post-job" element={<JobForm />} />
-        </Routes>
-        <Footer />
-      </div>
+      <AuthProvider>
+        <div>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/jobs" element={<JobList />} />
+            <Route path="/jobs/:jobId" element={<JobDetail />} />
+            <Route path="/employer-dashboard" element={<EmployerDashboard />} />
+            <Route path="/jobseeker-dashboard" element={<JobSeekerDashboard />} />
+            <Route path="/post-job" element={<JobForm />} />
+          </Routes>
+          <Footer />
+        </div>
+      </AuthProvider>
     </Router>
   );
 };

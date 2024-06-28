@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors');  // Add this line
+const cors = require('cors');  
 const authRoutes = require('./routes/auth');
 const jobRoutes = require('./routes/jobs');
 
