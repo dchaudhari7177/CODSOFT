@@ -1,8 +1,8 @@
 const User = require('../models/user');
 const bcrypt = require('bcryptjs');
 
-exports.signup = async (req, res) => {
-  const { username, email, password, role } = req.body;
+const signup = async (req, res, role) => {
+  const { username, email, password } = req.body;
   try {
     let user = await User.findOne({ email });
     if (user) {
@@ -21,14 +21,14 @@ exports.signup = async (req, res) => {
 
     await user.save();
 
-    res.status(201).json({ message: 'User registered successfully' });
+    res.status(201).json({ message: `${role} registered successfully` });
   } catch (error) {
     console.error(error.message);
     res.status(500).send('Server Error');
   }
 };
 
-exports.login = async (req, res) => {
+const login = async (req, res) => {
   const { email, password } = req.body;
   try {
     let user = await User.findOne({ email });
@@ -41,9 +41,15 @@ exports.login = async (req, res) => {
       return res.status(400).json({ error: 'Invalid credentials' });
     }
 
-    res.json({ message: 'Login successful' });
+    res.json({ message: 'Login successful', role: user.role });
   } catch (error) {
     console.error(error.message);
     res.status(500).send('Server Error');
   }
 };
+
+exports.signupJobSeeker = (req, res) => signup(req, res, 'jobseeker');
+exports.loginJobSeeker = (req, res) => login(req, res);
+
+exports.signupEmployer = (req, res) => signup(req, res, 'employer');
+exports.loginEmployer = (req, res) => login(req, res);

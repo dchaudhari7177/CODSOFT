@@ -27,7 +27,9 @@ const JobList = () => {
         {Array.isArray(jobs) &&
           jobs.map((job) => (
             <li key={job._id}>
-              {job.title} - {job.company}
+              {job.title}
+              {job.description}
+              {job.date}
             </li>
           ))}
       </ul>

@@ -1,49 +1,43 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useAuth } from '../../context/AuthContext';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Signup.css';
 import { useNavigate } from 'react-router-dom';
 
-const Signup = () => {
-  const [username, setUsername] = useState('');
+const EmployerSignup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [companyName, setCompanyName] = useState('');
   const [error, setError] = useState('');
-  const { login } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (password !== confirmPassword) {
-      setError('Passwords do not match');
-      return;
-    }
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/signup', { username, email, password, role: 'jobseeker' });
-      login();
-      toast.success('Signup successful!', {
-        position: toast.POSITION.TOP_CENTER,
+      const response = await axios.post('http://localhost:5000/api/auth/employer/signup', {
+        email,
+        password,
+        companyName,
       });
-      navigate('/login');
+      toast.success('Signup successful!', { position: 'top-center' });
+      navigate('/employer-dashboard');
     } catch (err) {
-      setError('Signup failed');
+      setError('Failed to sign up');
     }
   };
 
   return (
     <div className="signup-container">
       <div className="signup-form">
-        <h1 className="animated-title">Signup</h1>
+        <h1 className="animated-title">Employer Signup</h1>
         {error && <p className="error-message">{error}</p>}
         <form onSubmit={handleSubmit}>
           <input
             type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            placeholder="Company Name"
+            value={companyName}
+            onChange={(e) => setCompanyName(e.target.value)}
             required
             className="input-field"
           />
@@ -63,19 +57,11 @@ const Signup = () => {
             required
             className="input-field"
           />
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-            className="input-field"
-          />
-          <button type="submit" className="submit-button">Signup</button>
+          <button type="submit" className="submit-button">Sign Up</button>
         </form>
       </div>
     </div>
   );
 };
 
-export default Signup;
+export default EmployerSignup;

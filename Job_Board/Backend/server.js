@@ -14,7 +14,7 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-const mongoURI = 'mongodb://127.0.0.1:27017/Job_Board';
+const mongoURI = 'mongodb://127.0.0.1:27017/Job_Board2';
 
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,

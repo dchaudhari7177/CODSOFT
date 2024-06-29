@@ -16,7 +16,7 @@ const JobForm = () => {
       setTitle('');
       setDescription('');
     } catch (error) {
-      console.error('Error posting job:', error);
+      console.error('Error posting job:', error.message);
     }
   };
 

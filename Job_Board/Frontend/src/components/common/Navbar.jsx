@@ -20,8 +20,10 @@ const Navbar = () => {
     } else {
       return (
         <>
-          <Link to="/login" className={location.pathname === '/login' ? 'active-link' : ''}>Login</Link>
-          <Link to="/signup" className={location.pathname === '/signup' ? 'active-link' : ''}>Signup</Link>
+          <Link to="/employer-login" className={location.pathname === '/employer-login' ? 'active-link' : ''}>Employer Login</Link>
+          <Link to="/jobseeker-login" className={location.pathname === '/jobseeker-login' ? 'active-link' : ''}>Job Seeker Login</Link>
+          <Link to="/employer-signup" className={location.pathname === '/employer-signup' ? 'active-link' : ''}>Employer Signup</Link>
+          <Link to="/jobseeker-signup" className={location.pathname === '/jobseeker-signup' ? 'active-link' : ''}>Job Seeker Signup</Link>
         </>
       );
     }

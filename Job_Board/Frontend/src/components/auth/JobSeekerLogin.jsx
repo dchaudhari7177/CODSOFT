@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import './Login.css';
 import { useNavigate } from 'react-router-dom';
 
-const Login = () => {
+const JobSeekerLogin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -16,20 +16,19 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
-      login();
+      const response = await axios.post('http://localhost:5000/api/auth/jobseeker-login', { email, password });
+      login('jobseeker');
       toast.success('Login successful!', { position: 'top-center' });
-      navigate('/');
+      navigate('/jobseeker-dashboard');
     } catch (err) {
       setError('Invalid email or password');
     }
   };
-  
 
   return (
     <div className="login-container">
       <div className="login-form">
-        <h1 className="animated-title">Login</h1>
+        <h1 className="animated-title">Job Seeker Login</h1>
         {error && <p className="error-message">{error}</p>}
         <form onSubmit={handleSubmit}>
           <input
@@ -55,4 +54,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default JobSeekerLogin;
